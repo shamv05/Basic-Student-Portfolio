@@ -1,0 +1,178 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #d9fff5, #e6f9ff);
+    color: #024f4f;
+}
+
+/* NAV BAR */
+nav {
+    background: linear-gradient(90deg, #00bfa6, #00d4c0);
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    margin-left: 35px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffeea7;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ffeea7;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 80%;
+    margin: 60px auto;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* PAGE TITLE */
+h1 {
+    text-align: center;
+    background: linear-gradient(90deg, #008b7c, #00c0a8);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+/* PROFILE PHOTO */
+.profile-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 35px 0;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    border: 4px solid #eafffa;
+    transition: 0.3s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 32px rgba(0,0,0,0.2);
+}
+
+/* SKILLS (Glass Cards) */
+.skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.card {
+    width: 30%;
+    min-width: 260px;
+    padding: 30px;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: #008b7c;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* FORM */
+form {
+    width: 60%;
+    margin: auto;
+    background: rgba(255,255,255,0.6);
+    padding: 35px;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    background: #ecfffa;
+    border-radius: 12px;
+    border: 1px solid #9ae9db;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #00bfa6;
+    box-shadow: 0 0 8px rgba(0,191,166,0.4);
+}
+
+/* BUTTON */
+button {
+    margin-top: 20px;
+    padding: 14px 32px;
+    background: linear-gradient(90deg, #009c8a, #00cbb3);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #008b7c, #00bfa6);
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .card {
+        width: 100%;
+    }
+    form {
+        width: 90%;
+    }
+}
